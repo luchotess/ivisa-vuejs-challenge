@@ -1,29 +1,70 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="app">
+        <header></header>
+        <div id="nav">
+            <router-link to="/"><b>STEP 1</b> - BASIC INFORMATION</router-link>
+            <router-link to="/about"><b>STEP 2</b> - REVISION AND PAYMENT</router-link>
+        </div>
+        <router-view/>
+        <footer></footer>
     </div>
-    <router-view/>
-  </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+    * {
+        font-family: 'Roboto', sans-serif;;
     }
-  }
-}
+
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    header {
+        background-image: url("./assets/header.png");
+        max-width: 1920px;
+        height: 350px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    footer {
+        background-image: url("./assets/footer.png");
+        max-width: 1920px;
+        height: 234px;
+        margin-top: 80px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    #app {
+        font-family: 'Avenir', Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
+    }
+
+    #nav {
+        margin: 80px auto 0;
+        max-width: 1140px;
+
+        a {
+            display: inline-block;
+            box-sizing: border-box;
+            padding: 25px;
+            text-align: center;
+            width: 50%;
+            color: #6c757d;
+            border: 1px solid #eaebea;
+            text-decoration: none;
+            font-size: 16px;
+
+            &.router-link-exact-active, &:hover {
+                color: white;
+                background-color: #5b73c1;
+                border: 1px solid transparent;
+            }
+        }
+    }
 </style>
