@@ -3,7 +3,7 @@
         <header></header>
         <div id="nav">
             <router-link to="/"><b>STEP 1</b> - BASIC INFORMATION</router-link>
-            <router-link to="/about"><b>STEP 2</b> - REVISION AND PAYMENT</router-link>
+            <router-link to="/step2"><b>STEP 2</b> - REVISION AND PAYMENT</router-link>
         </div>
         <router-view/>
         <footer></footer>
